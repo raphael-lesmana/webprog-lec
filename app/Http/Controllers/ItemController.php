@@ -103,8 +103,15 @@ class ItemController extends Controller
         if (!isset($item))
             abort(403);
     
-        $item->delete();
-        return back();
+        try 
+        {
+            $item->delete();
+        }
+        catch (\Exception $e)
+        {
+            return back();
+        }
+        return redirect('/');
     }
 
     public function update_index($id)

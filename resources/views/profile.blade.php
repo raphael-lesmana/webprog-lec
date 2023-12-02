@@ -1,3 +1,8 @@
+@extends('include.navbar')
+
+@section('My Profile | Mediklik')
+
+@section('content')
 <h1>User profile</h1>
 <h2>{{ $user->name }}</h2>
 <img src="/storage/assets/profiles/{{ $user->picture }}" width="200px">
@@ -7,3 +12,4 @@
 </ul>
 
 <a href="/settings"><button>Edit</button></a>
+@endsection

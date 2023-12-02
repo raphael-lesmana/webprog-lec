@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WalletController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +44,6 @@ Route::post('/add', [ItemController::class, 'add'])->middleware('auth');
 Route::get('/item/{id}', [ItemController::class, 'detail']);
 Route::post('/item/{id}', [ItemController::class, 'order']);
 
-Route::get('/manage', [ItemController::class, 'manage_index'])->middleware('auth');
 Route::post('/manage', [ItemController::class, 'delete'])->middleware('auth');
 
 Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware('auth');
@@ -56,6 +56,8 @@ Route::get('/topup', [WalletController::class, 'topup_index'])->middleware('auth
 Route::post('/topup', [WalletController::class, 'topup'])->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+
+Route::get('/history', [TransactionController::class, 'index'])->middleware('auth');
 
 Route::get('/settings', [ProfileController::class, 'settings'])->middleware('auth');
 Route::patch('/settings', [ProfileController::class, 'save'])->middleware('auth');

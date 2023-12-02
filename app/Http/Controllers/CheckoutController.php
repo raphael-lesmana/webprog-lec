@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CartItem;
+use App\Models\TransactionDetail;
 use App\Models\TransactionHeader;
 use Illuminate\Http\Request;
 
@@ -28,14 +29,16 @@ class CheckoutController extends Controller
         unset($cart_item);
         foreach ($cart_items as $cart_item)
         {
-            $cart_item->item->transaction_detail()->create([
+            TransactionDetail::create([
                 'transaction_header_id' => $header->id,
+                'item_name' => $cart_item->item->name,
+                'item_price' => $cart_item->item->price,
                 'qty' => $cart_item->qty,
             ]);
         }
         auth()->user()->balance -= $total;
         auth()->user()->save();
         $cart->delete();
-        return view('success');
+        return redirect('/');
     }
 }

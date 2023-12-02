@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('transaction_header_id')->constrained();
-            $table->foreignId('item_id')->constrained();
+            $table->string('item_name');
+            $table->integer('item_price')->unsigned();
             $table->integer('qty');
             $table->timestamps();
         });

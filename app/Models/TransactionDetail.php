@@ -9,11 +9,14 @@ class TransactionDetail extends Model
 {
     protected $fillable = [
         'transaction_header_id',
-        'qty'
+        'qty',
+        'item_name',
+        'item_price',
     ];
-    public function transaction_header()
+    public function transactionHeader()
     {
         return $this->belongsTo(TransactionHeader::class);
     }
+
     use HasFactory;
 }
