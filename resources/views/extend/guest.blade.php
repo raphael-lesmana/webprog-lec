@@ -5,14 +5,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="./app.css" rel="stylesheet">
     </head>
-    <body style="background-color: black">
+    <body style="background-color: #abebf5">
         @section('error')
             @include('include.error')
         @show
         <div class="grid z-3">
             <div class="row">
                 <div class="col-8 guest-background"></div>
-                    <div class="col-4 mx-auto" style="width:450px; margin-top: 150px; color:white;">
+                    <div class="col-4 mx-auto" style="width:450px; margin-top: 150px; color:black;">
                         @section('content')
                         @show
                     </div>

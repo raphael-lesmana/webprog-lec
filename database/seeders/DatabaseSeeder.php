@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
@@ -19,111 +20,80 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->admin()->create();
 
         DB::table('items')->insert([
-            'name' => 'Sweet and Sour Pork',
-            'type' => 'main',
+            'name' => 'Paracetamol',
+            'type' => 'Tablet',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
-            'picture' => 'sweet-and-sour-pork.jpg',
+            'picture' => 'paracetamol.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Mapo Tofu',
-            'type' => 'main',
+            'name' => 'Salbutamol',
+            'type' => 'Tablet',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'mapo-tofu.jpg',
+            'price' => 20,
+            'picture' => 'salbutamol.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'General Tso\'s Chicken',
-            'type' => 'main',
+            'name' => 'Cefadroxil',
+            'type' => 'Capsule',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'general-tso.jpg',
+            'price' => 40,
+            'picture' => 'cefadroxil.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Orange Chicken',
-            'type' => 'main',
+            'name' => 'Fenamin',
+            'type' => 'Capsule',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
             'price' => 10,
-            'picture' => 'orange-chicken.jpg',
+            'picture' => 'cefadroxil.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Mongolian Beef',
-            'type' => 'main',
+            'name' => 'Decadryl',
+            'type' => 'Syrup',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'mongolian-beef.png',
+            'price' => 8,
+            'picture' => 'decadryl.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Sesame Chicken',
-            'type' => 'main',
+            'name' => 'Acyclovir',
+            'type' => 'Ointment',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'sesame-chicken.jpg',
+            'price' => 12,
+            'picture' => 'acyclovir.jpg',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Chinese Tea',
-            'type' => 'beverage',
+            'name' => 'Band-aids',
+            'type' => 'Other',
             'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
             'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'chinese-tea.jpg',
+            'price' => 4,
+            'picture' => 'band-aids.jpg',
         ]);
 
-        DB::table('items')->insert([
-            'name' => 'Liang Tea',
-            'type' => 'beverage',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'liang-tea.jpg',
+        User::create([
+            'name' => 'Customer',
+            'email' => 'test@example.com',
+            'balance' => 5000,
+            'password' => 'password',
         ]);
 
-        DB::table('items')->insert([
-            'name' => 'Soybean Milk',
-            'type' => 'beverage',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'soybean-milk.jpg',
-        ]);
-
-        DB::table('items')->insert([
-            'name' => 'Silky Tofu Puding',
-            'type' => 'dessert',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'tofu-pudding.jpg',
-        ]);
-
-        DB::table('items')->insert([
-            'name' => 'Pumpkin Cake',
-            'type' => 'dessert',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'pumpkin-cake.jpg',
-        ]);
-
-        DB::table('items')->insert([
-            'name' => 'Sesame Balls',
-            'type' => 'dessert',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'sesame-balls.jpg',
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => 'password',
+            'is_admin' => true,
         ]);
     }
 }

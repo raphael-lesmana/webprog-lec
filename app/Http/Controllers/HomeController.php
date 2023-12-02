@@ -9,9 +9,11 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $main_dishes = Item::where('type', 'main')->get();
-        $beverages = Item::where('type', 'beverage')->get();
-        $desserts = Item::where('type', 'dessert')->get();
-        return view('index', compact('main_dishes', 'beverages', 'desserts'));
+        $capsules = Item::where('type', 'Capsule')->get();
+        $tablets = Item::where('type', 'Tablet')->get();
+        $syrups = Item::where('type', 'Syrup')->get();
+        $ointments = Item::where('type', 'Ointment')->get();
+        $others = Item::where('type', 'Other')->get();
+        return view('index', compact('capsules', 'tablets', 'syrups', 'ointments', 'others'));
     }
 }

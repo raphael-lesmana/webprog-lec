@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('phone_number', 12)->nullable();
             $table->string('address', 128)->nullable();
             $table->string('picture', 256)->nullable();
-            $table->boolean('is_admin');
+            $table->boolean('is_admin')->default(false);
+            $table->bigInteger('balance')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

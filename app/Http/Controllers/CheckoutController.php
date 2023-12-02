@@ -15,20 +15,17 @@ class CheckoutController extends Controller
 
     public function checkout(Request $request)
     {
-        // $request->validate([
-        //     'full_name' => 'required|min:5',
-        //     'phone' => 'required|digits:12',
-        //     'address' => 'required|min:5',
-        //     'city' => 'required|min:5',
-        //     'card_name' => 'required|min:3',
-        //     'card_number' => 'required|min:16',
-        //     'country' => 'required',
-        //     'zip' => 'required|numeric'
-        // ]);
-
         $header = auth()->user()->transaction_header()->create();
         $cart = CartItem::whereBelongsTo(auth()->user());
         $cart_items = $cart->get();
+        $total = 0;
+        foreach ($cart_items as $cart_item)
+        {
+            $total += $cart_item->qty * $cart_item->item->price;
+            if ($total > auth()->user()->balance)
+                return back();
+        }
+        unset($cart_item);
         foreach ($cart_items as $cart_item)
         {
             $cart_item->item->transaction_detail()->create([
@@ -36,6 +33,8 @@ class CheckoutController extends Controller
                 'qty' => $cart_item->qty,
             ]);
         }
+        auth()->user()->balance -= $total;
+        auth()->user()->save();
         $cart->delete();
         return view('success');
     }

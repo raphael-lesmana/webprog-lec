@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\WalletController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +50,10 @@ Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware(
 Route::patch('/update/{id}', [ItemController::class, 'update'])->middleware('auth');
 
 Route::get('/cart', [CartItemController::class, 'display'])->middleware('auth');
+
+Route::get('/wallet', [WalletController::class, 'index'])->middleware('auth');
+Route::get('/topup', [WalletController::class, 'topup_index'])->middleware('auth');
+Route::post('/topup', [WalletController::class, 'topup'])->middleware('auth');
 
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 
