@@ -8,7 +8,7 @@
 <h1>{{$item->name}}</h1>
 <span>Price: {{$item->price}}</span>
 <div>
-    <img src="{{$item->picture}}">
+    <img src="/storage/assets/items/{{$item->picture}}">
 </div>
 <div>
     <h2>Description</h2>

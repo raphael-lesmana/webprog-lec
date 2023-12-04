@@ -17,7 +17,7 @@
         @auth
             @if (Gate::allows('admin'))
             <li><a href="/add">Add Items</a></li>
-            @else
+       `     @else
             <li><a href="/cart">My Cart</a></li>
             <li><a href="/history">My Transactions</a></li>
             <li><a href="/wallet">Wallet</a></li>
