@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CartItem;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -30,12 +31,24 @@ class ItemController extends Controller
         $item = Item::find($id);
         if (!isset($item))
             abort(404);
+        $check = CartItem::where([
+            'user_id' => auth()->user()->id,
+            'item_id' => $id,
+        ]);
+
+        if (sizeof($check->get()) > 0)
+        {
+            $check = $check->increment('qty');
+            $success = true;
+            return view('details', compact('success', 'item'));
+        }
 
         auth()->user()->cart_item()->create([
             'item_id' => $id,
             'qty' => 1,
         ]);
-        return back();
+        $success = true;
+        return view('details', compact('success', 'item'));
     }
 
     public function add(Request $request)

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('item_id')->nullable()->constrained();
             $table->integer('qty')->unsigned();
             $table->timestamps();
+            $table->primary(['user_id', 'item_id']);
         });
     }
 
