@@ -13,10 +13,9 @@
         <div class="grid z-3">
             <div class="row d-flex">
                 <div class="col-8 guest-background"><img src="/assets/logo.png" alt=""></div>
-                    <div class="col-4 mx-auto" style="width:450px; margin-top: 150px; color:black;">
-                        @section('content')
-                        @show
-                    </div>
+                <div class="col-4 mx-auto" style="width:450px; margin-top: 150px; color:black;">
+                    @section('content')
+                    @show
                 </div>
             </div>
         </div>
