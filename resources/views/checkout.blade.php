@@ -7,6 +7,6 @@
     <form action="/checkout" method="POST">
         @csrf
         <h2>Confirm purchase?</h2>
-        <button>yes</button>
+        <button>Yes</button>
     </form>
 @endsection

@@ -16,9 +16,9 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+                    
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="margin-left:auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/" style="color: black">Home</a>
                     </li>
@@ -41,11 +41,7 @@
                         <a class="nav-link active" href="/profile" style="color: black">Profile</a>
                     </li>
                     @endif
-                </ul>
-            </div>  
-                    
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav" style="margin-left:auto">
+
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: black">
                             Welcome, {{ auth()->user()->name }}
