@@ -2,6 +2,7 @@
 
 @section('title', 'Log in | Mediklik')
 @section('content')
+<div>
     <h1 class="text-center">Login</h1>
     <form action="/login" method="post">
         @csrf
@@ -22,4 +23,5 @@
             <p class="text-center">Don't have an account?  <a class="text-decoration-none" style="color: green" href="register">Sign up</a></p>
         </div>
     </form>
+</div>
 @endsection

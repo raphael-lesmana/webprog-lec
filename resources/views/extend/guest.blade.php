@@ -6,12 +6,13 @@
         <link href="./app.css" rel="stylesheet">
     </head>
     <body style="background-color: #abebf5">
+    f
         @section('error')
             @include('include.error')
         @show
         <div class="grid z-3">
-            <div class="row">
-                <div class="col-8 guest-background"></div>
+            <div class="row d-flex">
+                <div class="col-8 guest-background"><img src="/assets/logo.png" alt=""></div>
                     <div class="col-4 mx-auto" style="width:450px; margin-top: 150px; color:black;">
                         @section('content')
                         @show
