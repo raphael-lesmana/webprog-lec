@@ -4,7 +4,7 @@
 
 @section('content')
     <div>
-        <h1 style="margin-top: 25px; margin-bottom: 25px">Welcome to Mediklik</h1>
+        <h1 style="margin-bottom: 25px">Welcome to Mediklik</h1>
         <div class="category" style="margin-bottom: 25px">
             <h2>Capsules</h2>
             <div class=grid id="main-grid">

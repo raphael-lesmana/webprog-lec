@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-lg" style="font-weight: bold; background-color: #CED9BB">
         <div class="container-fluid"> 
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
-                <img src="../assets/logo.png" alt="" style="height: 35px">
+                <img src="/storage/assets/items/logo.png" alt="" style="height: 35px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,13 +47,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav" style="margin-left:auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: gold">
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false`" style="color: black">
                             Welcome, {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: dimgrey">
-                            <li><a class="dropdown-item" href="/profile" style="color: gold">Profile</a></li>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" style="background-color: white">
+                            <li><a class="dropdown-item" href="/profile" style="color: black">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/logout" style="color: gold">Log Out</a></li>
+                            <li><a class="dropdown-item" href="/logout" style="color: black">Log Out</a></li>
                         </ul>
                     </li>
                     @endauth
@@ -72,7 +72,7 @@
         </div>
     </nav>
 
-    <div style="margin-left: 100px; margin-right: 100px">
+    <div style="margin-left: 100px; margin-right: 100px; margin-top: 50px">
         @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
