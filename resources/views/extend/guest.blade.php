@@ -6,16 +6,14 @@
         <link href="./app.css" rel="stylesheet">
     </head>
     <body style="background-color: #abebf5">
-    f
         @section('error')
             @include('include.error')
         @show
-        <div class="grid">
-            <div class="row">
+        <div class="container">
+            <div class="row align-items-center">
                 <div class="col-8 guest-background"></div>
-                <div class="col-4 d-flex" style="color:black; justify-content: center; align-items: center; margin-top: -70vh">
-                    @section('content')
-                    @show
+                <div class="col-4" style="color:black;">
+                    @yield('content')
                 </div>
             </div>
         </div>

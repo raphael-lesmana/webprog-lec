@@ -1,5 +1,6 @@
 .guest-background {
-    background-image: url("./assets/logo.png");
+    background-image: url("./storage/assets/logo.png");
     background-repeat: no-repeat;
     height: 1000px;
+    background-position: center; 
 }
