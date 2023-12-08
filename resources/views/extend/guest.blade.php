@@ -12,8 +12,8 @@
         @show
         <div class="grid">
             <div class="row">
-                <div class="col-8 guest-background"><img src="/assets/logo.png" alt="" style="object-fit:cover"></div>
-                <div class="col-4 d-flex" style="color:black; justify-content: center; align-items: center">
+                <div class="col-8 guest-background"></div>
+                <div class="col-4 d-flex" style="color:black; justify-content: center; align-items: center; margin-top: -70vh">
                     @section('content')
                     @show
                 </div>
