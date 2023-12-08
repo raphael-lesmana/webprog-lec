@@ -1,7 +1,6 @@
 @extends('include.navbar')
 @section('content')
 <h1>My cart</h1>
-<?php $total = 0 ?>
 <table class="table table-bordered" style="border-color:#CED9BB; ">
     <thead class="table" style="background-color: #CED9BB">
         <tr class="table" style="background-color: #CED9BB; text-align: center; color: black; border-color:#CED9BB">
@@ -40,20 +39,4 @@
     <br>
     <a href="/checkout"><button class="btn btn-secondary mt-2" style="color: black">Proceed to Checkout</button></a>
 </div>
-
-<?php $total = 0 ?>
-<table>
-<?php
-foreach ($cart_items as $cart_item)
-{
-    echo '<tr>';
-    echo '<td>'. $cart_item->item->name . '</td><td>' . $cart_item->item->price . '</td><td>' . $cart_item->qty . '</td>';
-    $total += $cart_item->item->price;
-    echo '</tr>';
-}
-?>
-</table>
-<span>Total: <?php echo $total ?></span>
-
-<a href="/checkout"><button>Proceed to Checkout</button></a>
 @endsection
