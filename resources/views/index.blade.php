@@ -3,7 +3,7 @@
 @section('title', 'Homepage | Mediklik')
 
 @section('content')
-    <div style="margin-left: 100px; margin-right: 100px">
+    <div>
         <h1 style="margin-top: 25px; margin-bottom: 25px">Welcome to Mediklik</h1>
         <div class="category" style="margin-bottom: 25px">
             <h2>Capsules</h2>
@@ -11,9 +11,9 @@
                 <div class=row>
                     @foreach ($capsules as $item)
                     <div class="col-4" style="margin-left: 10px; margin-right: 10px">
-                        <a href="/item/{{$item->id}}">
+                        <a href="/item/item/{{$item->id}}">
                         <button class="btn btn-light active" type="button" style="background-color: #CED9BB; margin-top: 10px; margin-bottom: 10px; border-radius: 25px">
-                            <img src="/storage/assets/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
+                            <img src="/assets/items/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
                             <p style="margin: auto; font-size: 20px">{{$item->name}}</p>
                         </button>
                         </a>
@@ -31,7 +31,7 @@
                     <div class="col-4" style="margin-left: 10px; margin-right: 10px">
                         <a href="/item/{{$item->id}}">
                         <button class="btn btn-light active" type="button" style="background-color: #CED9BB; margin-top: 10px; margin-bottom: 10px; border-radius: 25px">
-                            <img src="/storage/assets/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
+                            <img src="/assets/items/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
                             <p style="margin: auto; font-size: 20px">{{$item->name}}</p>
                         </button>
                         </a>
@@ -49,7 +49,7 @@
                     <div class="col-4" style="margin-left: 10px; margin-right: 10px">
                         <a href="/item/{{$item->id}}">
                         <button class="btn btn-light active" type="button" style="background-color: #CED9BB; margin-top: 10px; margin-bottom: 10px; border-radius: 25px">
-                            <img src="/storage/assets/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
+                            <img src="/assets/items/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
                             <p style="margin: auto; font-size: 20px">{{$item->name}}</p>
                         </button>
                         </a>
@@ -67,7 +67,7 @@
                     <div class="col-4" style="margin-left: 10px; margin-right: 10px">
                         <a href="/item/{{$item->id}}">
                         <button class="btn btn-light active" type="button" style="background-color: #CED9BB; margin-top: 10px; margin-bottom: 10px; border-radius: 25px">
-                            <img src="/storage/assets/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
+                            <img src="/assets/items/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
                             <p style="margin: auto; font-size: 20px">{{$item->name}}</p>
                         </button>
                         </a>
@@ -85,7 +85,7 @@
                     <div class="col-4" style="margin-left: 10px; margin-right: 10px">
                         <a href="/item/{{$item->id}}">
                         <button class="btn btn-light active" type="button" style="background-color: #CED9BB; margin-top: 10px; margin-bottom: 10px; border-radius: 25px">
-                            <img src="/storage/assets/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
+                            <img src="/assets/items/{{$item->picture}}" style="height: 200px; width: 300px; object-fit: cover; border-radius: 25px">
                             <p style="margin: auto; font-size: 20px">{{$item->name}}</p>
                         </button>
                         </a>
