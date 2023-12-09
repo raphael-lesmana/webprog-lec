@@ -16,7 +16,8 @@ class ProfileController extends Controller
 
     public function settings()
     {
-        return view('settings');
+        $user = auth()->user();
+        return view('settings', compact('user'));
     }
 
     public function save(Request $request)
