@@ -86,6 +86,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Customer',
             'email' => 'test@example.com',
             'balance' => 5000,
+            'picture' => 'default0.jpg',
             'password' => 'password',
         ]);
 
@@ -93,6 +94,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@example.com',
             'password' => 'password',
+            'picture' => 'default0.jpg',
             'is_admin' => true,
         ]);
     }
