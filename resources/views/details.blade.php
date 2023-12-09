@@ -16,7 +16,7 @@
                 <p class="card-text">
                     <ul class="list-unstyled">
                         <li style="color: black; font-size: 30px">Price</li>
-                        <li style="font-size: 25px">Rp{{ $item->price }}000.00,-</li>
+                        <li style="font-size: 25px">Rp{{ $item->price }}</li>
                     </ul>
                     <ul class="list-unstyled">
                         <li style="color: black; font-size: 30px">Description</li>
