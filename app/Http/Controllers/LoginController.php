@@ -32,7 +32,7 @@ class LoginController extends Controller
     {
         $credentials = $request->validate([
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required|between:5,255'
         ]);
         $remember = $request->remember;
 
@@ -40,6 +40,12 @@ class LoginController extends Controller
         {
             $request->session()->regenerate();
             return redirect('/');
+        }
+        else 
+        {
+            return back()->withErrors([
+                'fail' => 'Incorrect email/password!'
+            ]);
         }
     }
 }
