@@ -106,16 +106,26 @@ class ItemController extends Controller
         return view('manageresults', compact('products'));
     }
 
+    public function process(Request $request)
+    {
+        if ($request->action == "edit")
+        {
+            return $this->update_index($request->item_id);
+        }
+        else if ($request->action == "delete")
+        {
+            return $this->delete($request);
+        }
+    }
     public function delete(Request $request)
     {
         $request->validate([
-            'delete' => 'required'
+            'item_id' => 'required'
         ]);
 
-        $item = Item::find($request->delete);
+        $item = Item::find($request->item_id);
         if (!isset($item))
             abort(403);
-    
         try 
         {
             $item->delete();

@@ -28,8 +28,8 @@
                         @if (Gate::allows('admin'))
                         <form action="/manage" method="POST">
                             @csrf
-                            <input type="hidden" name="delete" value="{{$item->id}}">
-                            <a href="/update/{{$item->id}}"><button>Edit</button></a>
+                            <input type="hidden" name="item_id" value="{{$item->id}}">
+                            <button name="action" value="edit">Edit</button>
                             <button name="action" value="delete">Delete</button>
                         </form>    
                         @else

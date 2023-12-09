@@ -44,7 +44,7 @@ Route::post('/add', [ItemController::class, 'add'])->middleware('auth');
 Route::get('/item/{id}', [ItemController::class, 'detail']);
 Route::post('/item/{id}', [ItemController::class, 'order']);
 
-Route::post('/manage', [ItemController::class, 'delete'])->middleware('auth');
+Route::post('/manage', [ItemController::class, 'process'])->middleware('auth');
 
 Route::get('/update/{id}', [ItemController::class, 'update_index'])->middleware('auth');
 Route::patch('/update/{id}', [ItemController::class, 'update'])->middleware('auth');
