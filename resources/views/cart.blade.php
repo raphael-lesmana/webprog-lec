@@ -38,7 +38,7 @@
     <span style="text-align: right; color: black; font-size: 30px; font-weight: bold">Total Price: ${{ $total }}</span>
     <br>
     <a href="/checkout">
-        <button class="btn btn-secondary mt-2" style="background-color: #528286">Add to wallet</button>
+        <button class="btn btn-secondary mt-2" style="background-color: #528286">Checkout</button>
     </a>
 </div>
 @endsection
