@@ -110,7 +110,7 @@ class ItemController extends Controller
     {
         if ($request->action == "edit")
         {
-            return $this->update_index($request->item_id);
+            return redirect('/update/' . $request->item_id);
         }
         else if ($request->action == "delete")
         {
