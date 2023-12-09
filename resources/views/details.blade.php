@@ -5,31 +5,6 @@
 @endsection
 
 @section('content')
-<!-- <h1>{{$item->name}}</h1>
-<span>Price: {{$item->price}}</span>
-<div>
-    <img src="/storage/assets/items/{{$item->picture}}">
-</div>
-<div>
-    <h2>Description</h2>
-    <p>{{$item->full_description}}</p>
-</div>
-@auth
-@if (Gate::allows('admin'))
-<form action="/manage" method="POST">
-    @csrf
-    <input type="hidden" name="delete" value="{{$item->id}}">
-    <a href="/update/{{$item->id}}"><button>Edit</button></a>
-    <button name="action" value="delete">Delete</button>
-</form>    
-@else
-<form action="/item/{{$item->id}}" method="POST">
-    @csrf
-    <button>Add to Cart</button>
-</form>
-@endif
-@endauth -->
-
 <div class="card text-black col-11 mx-auto mb-3">
     <div class="row g-0" style="background-color: #CED9BB">
         <div class="col-md-6">
@@ -49,19 +24,21 @@
                     </ul>
 
                     @auth
-                    @if (Gate::allows('admin'))
-                    <form action="/manage" method="POST">
-                        @csrf
-                        <input type="hidden" name="delete" value="{{$item->id}}">
-                        <a href="/update/{{$item->id}}"><button>Edit</button></a>
-                        <button name="action" value="delete">Delete</button>
-                    </form>    
-                    @else
-                    <form action="/item/{{$item->id}}" method="POST">
-                        @csrf
-                        <button>Add to Cart</button>
-                    </form>
-                    @endif
+                    <div class="d-flex mt-5" style="justify-content: right; align-items: center">
+                        @if (Gate::allows('admin'))
+                        <form action="/manage" method="POST">
+                            @csrf
+                            <input type="hidden" name="delete" value="{{$item->id}}">
+                            <a href="/update/{{$item->id}}"><button>Edit</button></a>
+                            <button name="action" value="delete">Delete</button>
+                        </form>    
+                        @else
+                        <form action="/item/{{$item->id}}" method="POST">
+                            @csrf
+                            <button class="btn btn-secondary" style="background-color: #528286">Add to Cart</button>
+                        </form>
+                        @endif
+                    </div>
                     @endauth
                 </p>
             </div>

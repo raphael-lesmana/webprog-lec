@@ -11,8 +11,8 @@
         @show
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-8 guest-background"></div>
-                <div class="col-4" style="color:black;">
+                <div class="col-7 guest-background" style="background-color: #CED8BB"></div>
+                <div class="col-5" style="color:black;">
                     @yield('content')
                 </div>
             </div>

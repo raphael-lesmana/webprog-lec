@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-lg" style="font-weight: bold; background-color: #CED9BB">
         <div class="container-fluid"> 
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
-                <img src="/storage/assets/items/logo.png" alt="" style="height: 35px">
+                <img src="/storage/assets/logo.png" alt="" style="height: 35px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

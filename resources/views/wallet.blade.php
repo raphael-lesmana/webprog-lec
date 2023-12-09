@@ -7,7 +7,9 @@
         <span class=text-center>You have  <span class="fw-bold">Rp {{$balance/1000}}.000</span> in your wallet currently</span>   
     </div>
     <div class="p-3 me-5 d-flex justify-content-end">
-        <a class="text-end" href="/topup"><button type="button bt-outline" style="background-color: #8FAEAF; border-radius: 4px; color: white; border: 5px solid #8FAEAF" >Top up</button></a>
+        <a class="text-end" href="/topup">
+            <button class="btn btn-secondary" style="background-color: #528286">Top up</button>
+        </a>
     </div>
 </body>
 @endsection

@@ -1,7 +1,7 @@
 @extends('include.navbar')
 @section('content')
 <h1>My cart</h1>
-<table class="table table-bordered" style="border-color:#CED9BB; ">
+<table class="table table-bordered mb-5" style="border-color:#CED9BB; ">
     <thead class="table" style="background-color: #CED9BB">
         <tr class="table" style="background-color: #CED9BB; text-align: center; color: black; border-color:#CED9BB">
             <th scope="col">Food</th>
@@ -37,6 +37,8 @@
 <div class="text-end">
     <span style="text-align: right; color: black; font-size: 30px; font-weight: bold">Total Price: ${{ $total }}</span>
     <br>
-    <a href="/checkout"><button class="btn btn-secondary mt-2" style="color: black">Proceed to Checkout</button></a>
+    <a href="/checkout">
+        <button class="btn btn-secondary mt-2" style="background-color: #528286">Add to wallet</button>
+    </a>
 </div>
 @endsection
