@@ -4,7 +4,7 @@
 <table class="table table-bordered mb-5" style="border-color:#CED9BB; ">
     <thead class="table" style="background-color: #CED9BB">
         <tr class="table" style="background-color: #CED9BB; text-align: center; color: black; border-color:#CED9BB">
-            <th scope="col">Food</th>
+            <th scope="col">Item Name</th>
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
             <th scope="col">Total</th>

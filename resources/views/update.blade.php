@@ -2,11 +2,11 @@
 @section('title', 'Update Item | Mediklik')
 
 @section('content')
-<h1>Update Food</h1>
+<h1>Update Item</h1>
 <form action="{{ Request::url() }}" method="POST" enctype="multipart/form-data">
     @csrf
     <input type="hidden" name="_method" value="PATCH">
-    <label for="name">Food name</label>
+    <label for="name">Item name</label>
     <input type="text" name="name" placeholder="" value="{{$item->name}}"><br>
     <label for="brief_description">Brief description</label>
     <textarea name="brief_description" placeholder="">{{$item->brief_description}}</textarea><br>
