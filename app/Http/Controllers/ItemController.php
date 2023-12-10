@@ -139,22 +139,25 @@ class ItemController extends Controller
             'full_description' => 'required|max:255',
             'type' => 'required',
             'price' => 'required|gt:0',
-            'picture' => 'required|mimes:jpeg,png,jpg',
+            'picture' => 'nullable|mimes:jpeg,png,jpg',
         ]);
         
         $item = Item::find($id);
         if (!isset($item))
             abort(404);
 
-        $filename = time() . "_" . $request->file('picture')->getClientOriginalName();
-        $request->file('picture')->storeAs('/assets/items/', $filename, 'public');
+        if ($request->file('picture'))
+        {
+            $filename = time() . "_" . $request->file('picture')->getClientOriginalName();
+            $request->file('picture')->storeAs('/assets/items/', $filename, 'public');
+            $item->picture = $filename;
+        }
         
         $item->name = $request->name;
         $item->brief_description = $request->brief_description;
         $item->full_description = $request->full_description;
         $item->type  = $request->type;
         $item->price = $request->price;
-        $item->picture = $filename;
         $item->save();
         return back();
     }
