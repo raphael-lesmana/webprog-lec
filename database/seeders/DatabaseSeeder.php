@@ -20,74 +20,131 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->admin()->create();
 
         DB::table('items')->insert([
-            'name' => 'Paracetamol',
-            'type' => 'Tablet',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'paracetamol.jpg',
-        ]);
-
-        DB::table('items')->insert([
             'name' => 'Salbutamol',
-            'type' => 'Tablet',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 20,
-            'picture' => 'salbutamol.jpg',
+            'type' => 'Capsule',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10000,
+            'picture' => 'salbutamol.png',
         ]);
 
         DB::table('items')->insert([
             'name' => 'Cefadroxil',
             'type' => 'Capsule',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 40,
-            'picture' => 'cefadroxil.jpg',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 40000,
+            'picture' => 'cefadroxil.png',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Fenamin',
+            'name' => 'Fenamin 500',
             'type' => 'Capsule',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 10,
-            'picture' => 'cefadroxil.jpg',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10000,
+            'picture' => 'fenamin.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Mycoral',
+            'type' => 'Tablet',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 10000,
+            'picture' => 'mycoral.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Cetirizine',
+            'type' => 'Tablet',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 13000,
+            'picture' => 'cetirizine.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Sumagesic',
+            'type' => 'Tablet',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 8000,
+            'picture' => 'sumagesic.png',
         ]);
 
         DB::table('items')->insert([
             'name' => 'Decadryl',
             'type' => 'Syrup',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 8,
-            'picture' => 'decadryl.jpg',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 14000,
+            'picture' => 'decadryl.png',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Acyclovir',
+            'name' => 'Actifed',
+            'type' => 'Syrup',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 8000,
+            'picture' => 'actifed.png',
+        ]);
+        
+        DB::table('items')->insert([
+            'name' => 'Hufagripp',
+            'type' => 'Syrup',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 17000,
+            'picture' => 'hufagripp.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Aciclovir',
             'type' => 'Ointment',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 12,
-            'picture' => 'acyclovir.jpg',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 12000,
+            'picture' => 'acyclovir.png',
         ]);
 
         DB::table('items')->insert([
-            'name' => 'Band-aids',
-            'type' => 'Other',
-            'brief_description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-            'full_description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
-            'price' => 4,
-            'picture' => 'band-aids.jpg',
+            'name' => 'Tenovate',
+            'type' => 'Ointment',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 16000,
+            'picture' => 'tenovate.png',
         ]);
+
+        DB::table('items')->insert([
+            'name' => 'Garamycin',
+            'type' => 'Ointment',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 15000,
+            'picture' => 'garamycin.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Band Aids',
+            'type' => 'Other',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 4000,
+            'picture' => 'band-aids.png',
+        ]);
+
+        DB::table('items')->insert([
+            'name' => 'Herocyn',
+            'type' => 'Other',
+            'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+            'price' => 20000,
+            'picture' => 'herocyn.png',
+        ]);
+
+        // DB::table('items')->insert([
+        //     'name' => 'Salonpas',
+        //     'type' => 'Other',
+        //     'description' => 'Eum non necessitatibus reiciendis sapiente eveniet minus aliquid dolores cumque hic doloremque laborum',
+        //     'price' => 6000,
+        //     'picture' => 'salonpas.png',
+        // ]);
 
         User::create([
             'name' => 'Customer',
             'email' => 'test@example.com',
-            'balance' => 5000,
-            'picture' => 'default0.jpg',
+            'balance' => 100000,
             'password' => 'password',
+            'picture' => 'default0.jpg',
         ]);
 
         User::create([

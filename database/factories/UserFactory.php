@@ -21,6 +21,7 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->email(),
             'password' => 'password',
+            'picture' => 'umin uwu.png'
         ];
     }
 

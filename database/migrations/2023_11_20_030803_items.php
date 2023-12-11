@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->enum('type', ['Capsule', 'Tablet', 'Syrup', 'Ointment', 'Other']);
-            $table->string('brief_description');
-            $table->string('full_description');
+            $table->string('description');
             $table->integer('price')->unsigned();
             $table->string('picture')->default('');
             $table->timestamps();

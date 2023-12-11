@@ -8,10 +8,10 @@
     <title>@yield('title')</title>
 </head>
 <body style="background-color: #C2E7DF">
-<nav class="navbar navbar-expand-lg" style="font-weight: bold; background-color: #CED9BB">
+<nav class="navbar navbar-expand-lg" style="font-weight: bold; background-color: #CED8BB">
         <div class="container-fluid"> 
             <a class="navbar-brand" href="/" style="color: gold; font-weight: bold">
-                <img src="/storage/assets/logo.png" alt="" style="height: 35px">
+                <img src="/storage/assets/logo.png" alt="" style="height: 50px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,9 +36,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/history" style="color: black">Transactions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/profile" style="color: black">Profile</a>
                     </li>
                     @endif
 

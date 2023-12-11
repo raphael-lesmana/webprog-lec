@@ -5,14 +5,14 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="./app.css" rel="stylesheet">
     </head>
-    <body style="background-color: #abebf5">
+    <body style="background-color: #C2E7DF">
         @section('error')
             @include('include.error')
         @show
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-7 guest-background" style="background-color: #CED8BB"></div>
-                <div class="col-5" style="color:black;">
+                <div class="col-4" style="color: black; margin-left: 60px">
                     @yield('content')
                 </div>
             </div>
