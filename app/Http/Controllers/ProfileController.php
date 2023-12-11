@@ -24,8 +24,8 @@ class ProfileController extends Controller
     {
         $request->validate([
             'name' => 'required|between:5,50',
-            'email' => 'nullable|email|ends_with:@gmail.com',
-            'phone' => 'nullable|numeric|size:12',
+            'email' => 'nullable|email',
+            'phone' => 'nullable|digits:12',
             'address' => 'nullable|min:5',
             'picture' => 'mimes:jpeg,png,jpg',
             'newpassword' => 'nullable|between:5,255',
@@ -39,7 +39,7 @@ class ProfileController extends Controller
 
         if (isset($request->picture))
         {
-            $filename = time() . "_" . $request->file('picture')->getClientOriginalName();
+            $filename = $request->file('picture')->getClientOriginalName();
             $request->file('picture')->storeAs('/assets/profiles/', $filename, 'public');
             $user->picture = $filename;
         }

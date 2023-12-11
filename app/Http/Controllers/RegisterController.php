@@ -19,7 +19,7 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|ends_with:@gmail.com',
+            'email' => 'required|email',
             'name' => 'required|between:5,50',
             'password' => 'required|between:5,255',
             'conPassword' => 'required|between:5,255|same:password',

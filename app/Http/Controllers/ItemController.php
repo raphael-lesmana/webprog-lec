@@ -51,8 +51,7 @@ class ItemController extends Controller
     {
         $request->validate([
             'name' => 'required|min:5',
-            'brief_description' => 'required|max:100',
-            'full_description' => 'required|max:255',
+            'description' => 'required|max:255',
             'type' => 'required',
             'price' => 'required|gt:0',
             'picture' => 'required|mimes:jpeg,png,jpg',
@@ -63,8 +62,7 @@ class ItemController extends Controller
 
         $item = new Item;
         $item->name = $request->name;
-        $item->brief_description = $request->brief_description;
-        $item->full_description = $request->full_description;
+        $item->description = $request->description;
         $item->type  = $request->type;
         $item->price = $request->price;
         $item->picture = $filename;
@@ -135,8 +133,7 @@ class ItemController extends Controller
     {
         $request->validate([
             'name' => 'required|min:5',
-            'brief_description' => 'required|max:100',
-            'full_description' => 'required|max:255',
+            'description' => 'required|max:255',
             'type' => 'required',
             'price' => 'required|gt:0',
             'picture' => 'nullable|mimes:jpeg,png,jpg',
@@ -154,8 +151,7 @@ class ItemController extends Controller
         }
         
         $item->name = $request->name;
-        $item->brief_description = $request->brief_description;
-        $item->full_description = $request->full_description;
+        $item->description = $request->description;
         $item->type  = $request->type;
         $item->price = $request->price;
         $item->save();

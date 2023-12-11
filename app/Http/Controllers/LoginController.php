@@ -31,7 +31,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required|between:5,255'
         ]);
         $remember = $request->remember;
